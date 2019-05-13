@@ -359,6 +359,14 @@
             }
         },
         {
+            "Key": "d49c2d59-9700-4fd5-a681-376386d34681",
+            "Value": {
+                "id": "31e0584a-cbad-484d-91e5-6c6c133d3cce",
+                "resourcePath": "objects\\uselessobjectthatpranavrequested\\uselessobjectthatpranavrequested.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d525aca9-2193-4b0b-bd42-c779273892b5",
             "Value": {
                 "id": "aaf7be6c-355c-430c-af81-4fdc9855e4f6",
