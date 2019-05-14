@@ -2,4 +2,4 @@
 
 ### Roadmap
 
-- Usable inventory items.
+- Usable inventory items. [X]
