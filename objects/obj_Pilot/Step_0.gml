@@ -12,7 +12,7 @@ if (obj_GameManager.Text[0] == "" and obj_GameManager.Inventory == -1)
 		else if (Dir == 1) y -= 2;
 		else if (Dir == 2) x -= 2;
 		else if (Dir == 3) y += 2;
-		if (Move mod 3 == 0) image_index += 1;
+		if (Move mod 2 == 0) image_index += 1;
 	}
 	if (Move == 0)
 	{

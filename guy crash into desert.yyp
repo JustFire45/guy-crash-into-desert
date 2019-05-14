@@ -119,6 +119,14 @@
             }
         },
         {
+            "Key": "3f03ab16-4f90-4138-a076-70679aa8193e",
+            "Value": {
+                "id": "a9dcb617-1ef2-48c4-ae02-c7d05d2a4e36",
+                "resourcePath": "scripts\\gitrepotest\\gitrepotest.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4eb2042d-a110-4021-8abc-1f9ecc6a74b7",
             "Value": {
                 "id": "f0d1354e-21bc-4ff4-955c-4940efceeca4",
@@ -457,7 +465,8 @@
     ],
     "script_order": [
         "97c08587-b3b6-4640-9655-ac9bca17ec84",
-        "7928c3c8-c0fd-4a85-a0cb-f5fa2c19351c"
+        "7928c3c8-c0fd-4a85-a0cb-f5fa2c19351c",
+        "3f03ab16-4f90-4138-a076-70679aa8193e"
     ],
     "tutorial": ""
 }
