@@ -3,17 +3,17 @@
 // Fill "Map" with 0
 var xx;
 var yy;
-for (yy = 0; yy < 500; yy += 1)
+for (yy = 0; yy < 1000; yy += 1)
 {
-	for (xx = 0; xx < 500; xx += 1) Map[xx, yy] = 0;
+	for (xx = 0; xx < 1000; xx += 1) Map[xx, yy] = 0;
 }
 
-// Add "obj_WoodenPlane" x12
+// Add "obj_WoodenPlane" x40
 var i = 0;
-while (i < 12)
+while (i < 40)
 {
-	var xx = irandom_range(2, 497);
-	var yy = irandom_range(2, 497);
+	var xx = irandom_range(2, 997);
+	var yy = irandom_range(2, 997);
 	if (!position_meeting(xx * 16, yy * 16, obj_Wall) and !position_meeting(xx * 16, yy * 16, obj_Pilot))
 	{
 		i += 1;
@@ -22,12 +22,12 @@ while (i < 12)
 	}
 }
 
-// Add "obj_Crate" x200
+// Add "obj_Crate" x700
 var i = 0;
-while (i < 200)
+while (i < 700)
 {
-	var xx = irandom_range(2, 497);
-	var yy = irandom_range(2, 497);
+	var xx = irandom_range(2, 997);
+	var yy = irandom_range(2, 997);
 	if (!position_meeting(xx * 16, yy * 16, obj_Wall) and !position_meeting(xx * 16, yy * 16, obj_Pilot))
 	{
 		i += 1;
@@ -36,12 +36,12 @@ while (i < 200)
 	}
 }
 
-// Add "obj_Cactus" x1000
+// Add "obj_Cactus" x4000
 var i = 0;
-while (i < 1000)
+while (i < 4000)
 {
-	var xx = irandom_range(2, 497);
-	var yy = irandom_range(2, 497);
+	var xx = irandom_range(2, 997);
+	var yy = irandom_range(2, 997);
 	if (!position_meeting(xx * 16, yy * 16, obj_Wall) and !position_meeting(xx * 16, yy * 16, obj_Pilot))
 	{
 		i += 1;
