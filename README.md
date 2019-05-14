@@ -6,3 +6,4 @@
 - Usable inventory items.
 - Interactable crates.
 - Interactable cacti.
+- Improved inventory system.
