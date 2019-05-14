@@ -9,6 +9,7 @@ obj_CameraObject.y = y + 8;
 image_speed = 0;
 Move = 0;
 Dir = 0;
+Run = -1;
 
 // Map Keys
 keyboard_set_map(ord("D"), vk_right);

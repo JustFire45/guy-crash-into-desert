@@ -8,7 +8,7 @@ obj_GameManager.HungerTick -= 1;
 if (obj_GameManager.HungerTick <= 0)
 {
 	obj_GameManager.HungerTick = 3;
-	obj_GameManager.P_HNG -= 1;
+	obj_GameManager.P_HNG -= 1.25 + (obj_Pilot.Run * 0.25);
 }
 
 // Thirst
@@ -16,7 +16,7 @@ obj_GameManager.ThirstTick -= 1;
 if (obj_GameManager.ThirstTick <= 0)
 {
 	obj_GameManager.ThirstTick = 1;
-	obj_GameManager.P_THR -= 1;
+	obj_GameManager.P_THR -= 1.25 + (obj_Pilot.Run * 0.25);
 }
 
 // obj_GroundItem Despawn Counter
