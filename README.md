@@ -2,4 +2,6 @@
 
 ### Roadmap
 
-- Usable inventory items. [X]
+- ~~Working inventory~~
+- ~~Aquirable ground items.~~
+- Usable inventory items.
