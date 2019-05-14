@@ -2,6 +2,7 @@
 
 ### Roadmap
 
-- ~~Working inventory~~
-- ~~Aquirable ground items.~~
+- ~~Everything before this point.~~
 - Usable inventory items.
+- Interactable crates.
+- Interactable cacti.
