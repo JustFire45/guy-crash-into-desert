@@ -8,3 +8,4 @@
 - Interactable crates.
 - Interactable cacti.
 - Improved inventory system.
+- Optimizations and general improvements.
