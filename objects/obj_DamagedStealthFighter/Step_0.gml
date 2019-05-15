@@ -14,7 +14,7 @@ for (i = 0; i < obj_GameManager.DSF_Smoke; i += 1)
 	instance_create_depth(xx, yy, -1, obj_Smoke);
 }
 
-if (obj_GameManager.Steps >= 30) image_index = 1;
+if (obj_GameManager.Steps >= 61) image_index = 1;
 
 // Op1 (Undestroyed "Loot") Ground Items
 if (Op1 == 1 and obj_GameManager.Text[0] == "")
