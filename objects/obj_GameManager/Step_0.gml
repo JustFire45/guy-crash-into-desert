@@ -22,13 +22,45 @@ else if (Steps >= 10) DSF_Smoke = 3;
 else if (Steps >= 5) DSF_Smoke = 2;
 
 // Open / Close Inventory
-if (keyboard_check_pressed(vk_tab) and obj_Pilot.Move == 0 and Text[0] == "") Inventory *= -1;
+if (keyboard_check_pressed(vk_tab) and obj_Pilot.Move == 0 and Text[0] == "" and InventoryOption == 0) Inventory *= -1;
+else if (keyboard_check_pressed(ord("X")) and obj_Pilot.Move == 0 and Text[0] == "" and InventoryOption == 0) Inventory = -1;
 
 // Inventory Update
 if (Inventory > 0)
 {
-	if (keyboard_check_pressed(vk_left) and InventorySelect > 0) InventorySelect -= 1;
-	else if (keyboard_check_pressed(vk_right) and InventorySelect < P_INVS - 1) InventorySelect += 1;
+	// Scroll Through Inventory
+	if (InventoryOption == 0)
+	{
+		if (keyboard_check_pressed(vk_left) and InventorySelect > 0) InventorySelect -= 1;
+		else if (keyboard_check_pressed(vk_right) and InventorySelect < P_INVS - 1) InventorySelect += 1;
+	}
+	
+	// Inventory Items
+	if (keyboard_check_pressed(vk_space) and P_INV[InventorySelect] != -1 and InventoryOption == 0)
+	{
+		InventoryOption = 1;
+	}
+	else if (keyboard_check_pressed(ord("X")) and InventoryOption > 0)
+	{
+		InventoryOption = 0;
+	}
+
+	if (InventoryOption > 0)
+	{
+		if (keyboard_check_pressed(vk_left) and InventoryOption > 1) InventoryOption -= 1;
+		else if (keyboard_check_pressed(vk_right) and InventoryOption < 2) InventoryOption += 1;
+	}
+	
+	// Discard Items in Slot
+	if (keyboard_check_pressed(vk_space) and InventoryOption == 2)
+	{
+		Inventory = -1;
+		InventoryOption = 0;
+		Text[0] = "You discarded < " + P_INVN[InventorySelect] + " [x" + string(P_INVC[InventorySelect]) + "] >";
+		P_INV[InventorySelect] = -1;
+		P_INVN[InventorySelect] = "";
+		P_INVC[InventorySelect] = 0;
+	}
 }
 else
 {

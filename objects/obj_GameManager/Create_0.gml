@@ -36,3 +36,4 @@ Steps = 0;
 DSF_Smoke = 1;
 Inventory = -1;
 InventorySelect = 0;
+InventoryOption = 0;

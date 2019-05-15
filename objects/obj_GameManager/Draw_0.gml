@@ -78,6 +78,7 @@ if (Inventory > 0)
 {
 	// Outline
 	draw_sprite(spr_Inventory, 0, camera_get_view_x(view_camera[0]) + 16, camera_get_view_y(view_camera[0]) + 8);
+	if (InventoryOption > 0) draw_sprite(spr_Inventory, InventoryOption, camera_get_view_x(view_camera[0]) + 16, camera_get_view_y(view_camera[0]) + 8);
 	
 	// HP, HNG, THR
 	draw_sprite_ext(spr_Inventory, 5, camera_get_view_x(view_camera[0]) + 58, camera_get_view_y(view_camera[0]) + 14, P_HP, 1, 0, c_white, 1);
