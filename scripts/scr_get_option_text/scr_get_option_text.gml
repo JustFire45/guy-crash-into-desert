@@ -44,3 +44,23 @@ else if (ob == "obj_DamagedStealthFighter2")
 		}
 	}
 }
+else if (ob == "obj_Crate")
+{
+	if (op == 0)
+	{
+		if (d.Op1 == 0)
+		{
+			d.Op1 = 1;
+			obj_GameManager.TextID.image_index = 1;
+			obj_GameManager.Text[0] = "You break open the box...";
+			obj_GameManager.OptionsCursor = 0;
+			obj_GameManager.Options = ["", "", "", ""];
+		}
+		else
+		{
+			obj_GameManager.Text[0] = "The box is empty.";
+			obj_GameManager.OptionsCursor = 0;
+			obj_GameManager.Options = ["", "", "", ""];
+		}
+	}
+}

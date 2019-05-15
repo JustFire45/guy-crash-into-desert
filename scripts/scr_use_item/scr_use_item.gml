@@ -2,6 +2,8 @@
 
 var a = obj_GameManager.P_INV[obj_GameManager.InventorySelect];
 
+scr_tick();
+
 if (a > 0 and a < 5)
 {
 	if (obj_GameManager.P_THR <= 75)
