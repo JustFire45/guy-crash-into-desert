@@ -8,6 +8,8 @@ var test = 1;
 if (test == 1)
 {
 	show_debug_message("Seed: " + string(random_get_seed()));
+	show_debug_message("Inventory: " + string(Inventory));
+	show_debug_message("InventoryOption: " + string(InventoryOption));
 	show_debug_message("");
 	
 	if (keyboard_check_pressed(ord("R"))) room_restart();
@@ -35,6 +37,25 @@ if (Inventory > 0)
 		else if (keyboard_check_pressed(vk_right) and InventorySelect < P_INVS - 1) InventorySelect += 1;
 	}
 	
+	// Use Items in Slot
+	if (keyboard_check_pressed(vk_space) and InventoryOption == 1)
+	{
+		Inventory = -1;
+		InventoryOption = 3;
+		scr_use_item();
+	}
+	
+	// Discard Items in Slot
+	else if (keyboard_check_pressed(vk_space) and InventoryOption == 2)
+	{
+		Inventory = -1;
+		InventoryOption = 3;
+		Text[0] = "You discarded < " + P_INVN[InventorySelect] + " [x" + string(P_INVC[InventorySelect]) + "] >";
+		P_INV[InventorySelect] = -1;
+		P_INVN[InventorySelect] = "";
+		P_INVC[InventorySelect] = 0;
+	}
+	
 	// Inventory Items
 	if (keyboard_check_pressed(vk_space) and P_INV[InventorySelect] != -1 and InventoryOption == 0)
 	{
@@ -51,16 +72,8 @@ if (Inventory > 0)
 		else if (keyboard_check_pressed(vk_right) and InventoryOption < 2) InventoryOption += 1;
 	}
 	
-	// Discard Items in Slot
-	if (keyboard_check_pressed(vk_space) and InventoryOption == 2)
-	{
-		Inventory = -1;
-		InventoryOption = 0;
-		Text[0] = "You discarded < " + P_INVN[InventorySelect] + " [x" + string(P_INVC[InventorySelect]) + "] >";
-		P_INV[InventorySelect] = -1;
-		P_INVN[InventorySelect] = "";
-		P_INVC[InventorySelect] = 0;
-	}
+	// Reset "InventoryOption" (quick solution, probably not good in the long run idk. it depends)
+	if (InventoryOption == 3) InventoryOption = 0;
 }
 else
 {
