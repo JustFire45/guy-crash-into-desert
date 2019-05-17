@@ -6,7 +6,7 @@ var d = obj_GameManager.TextID;
 
 scr_tick();
 
-if (ob == obj_DamagedStealthFighter)
+if (ob == "obj_DamagedStealthFighter")
 {
 	if (op == 0)
 	{

@@ -2,7 +2,7 @@
 
 if (((place_meeting(x + 1, y, obj_Pilot) and obj_Pilot.Dir == 2) or (place_meeting(x - 1, y, obj_Pilot) and obj_Pilot.Dir == 0)) and obj_GameManager.Steps < 25 and obj_GameManager.Inventory == -1 and obj_GameManager.Text[0] == "")
 {
-	obj_GameManager.TextObj = obj_DamagedStealthFighter;
+	obj_GameManager.TextObj = "obj_DamagedStealthFighter";
 	obj_GameManager.TextID = id;
 	if (obj_GameManager.Steps < 10) obj_GameManager.Text[0] = "A small fire has started inside.\nChoose an action (Press [X] to close).";
 	else if (obj_GameManager.Steps < 20) obj_GameManager.Text[0] = "The fire is growing.\nChoose an action (Press [X] to close).";
@@ -22,7 +22,7 @@ else if (((place_meeting(x + 1, y, obj_Pilot) and obj_Pilot.Dir == 2) or (place_
 	}
 	else
 	{
-		obj_GameManager.TextObj = obj_DamagedStealthFighter;
+		obj_GameManager.TextObj = "obj_DamagedStealthFighter";
 		obj_GameManager.TextID = id;
 		obj_GameManager.Text[0] = "The fire is too dangerous to retrieve anything.";
 	}
