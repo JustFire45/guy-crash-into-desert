@@ -119,6 +119,14 @@
             }
         },
         {
+            "Key": "435a8dd4-2465-419c-865e-8f6241e270f9",
+            "Value": {
+                "id": "be5304f7-8a61-4598-b0ad-a09ac4f32a11",
+                "resourcePath": "sprites\\spr_MiniBars\\spr_MiniBars.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4eb2042d-a110-4021-8abc-1f9ecc6a74b7",
             "Value": {
                 "id": "f0d1354e-21bc-4ff4-955c-4940efceeca4",

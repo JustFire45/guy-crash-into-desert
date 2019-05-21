@@ -3,10 +3,16 @@
 // Set Font
 draw_set_font(fnt_PixelFive);
 
-// FPS + Coordinates
+// FPS + Coordinates + MiniBars
 draw_text(camera_get_view_x(view_camera[0]) + 1, camera_get_view_y(view_camera[0]) - 1, "FPS: " + string(fps));
 draw_text(camera_get_view_x(view_camera[0]) + 1, camera_get_view_y(view_camera[0]) + 5, "X: " + string(round(obj_Pilot.x / 16)));
 draw_text(camera_get_view_x(view_camera[0]) + 1, camera_get_view_y(view_camera[0]) + 11, "Y: " + string(round(obj_Pilot.y / 16)));
+draw_sprite(spr_MiniBars, 0, camera_get_view_x(view_camera[0]) + 1, camera_get_view_y(view_camera[0]) + 19);
+draw_sprite(spr_MiniBars, 0, camera_get_view_x(view_camera[0]) + 1, camera_get_view_y(view_camera[0]) + 23);
+draw_sprite(spr_MiniBars, 0, camera_get_view_x(view_camera[0]) + 1, camera_get_view_y(view_camera[0]) + 27);
+draw_sprite_ext(spr_MiniBars, 1, camera_get_view_x(view_camera[0]) + 2, camera_get_view_y(view_camera[0]) + 19, ceil(P_HP / 4), 1, 0, c_white, 1);
+draw_sprite_ext(spr_MiniBars, 2, camera_get_view_x(view_camera[0]) + 2, camera_get_view_y(view_camera[0]) + 23, ceil(P_HNG / 4), 1, 0, c_white, 1);
+draw_sprite_ext(spr_MiniBars, 3, camera_get_view_x(view_camera[0]) + 2, camera_get_view_y(view_camera[0]) + 27, ceil(P_THR / 4), 1, 0, c_white, 1);
 
 // Text + Textbox
 if (Options[0] != "")
