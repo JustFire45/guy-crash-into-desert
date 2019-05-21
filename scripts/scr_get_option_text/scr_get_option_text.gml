@@ -74,13 +74,13 @@ else if (ob == "obj_Cactus")
 			if (irandom_range(1, 100) <= 80)
 			{
 				obj_GameManager.Text[0] = "You drank some cactus juice.\nIt didn't taste very good...";
-				obj_GameManager.Text[1] = "Your THIRST went up by 10!";
+				obj_GameManager.Text[1] = "Your THIRST went down by 10!";
 				obj_GameManager.P_THR += 10;
 			}
 			else
 			{
 				obj_GameManager.Text[0] = "You drank some cactus juice.\nYou feel sick...";
-				obj_GameManager.Text[1] = "Your THIRST went down by 5!\nYour HEALTH went down by 10!";
+				obj_GameManager.Text[1] = "Your THIRST went up by 5!\nYour HEALTH went down by 10!";
 				obj_GameManager.P_THR -= 5;
 				obj_GameManager.P_HP -= 10;
 			}
