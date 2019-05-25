@@ -56,11 +56,11 @@ if (Options[0] != "")
 		}
 		else if (keyboard_check_pressed(vk_space) and Options[OptionsCursor] != "")
 		{
-			scr_get_option_text();
 			TextWait = 0;
 			Text = [""];
 			Options = ["", "", "", ""];
 			OptionsCursor = 0;
+			scr_get_option_text();
 		}
 	}
 }
