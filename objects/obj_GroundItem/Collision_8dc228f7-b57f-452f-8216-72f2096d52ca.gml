@@ -83,4 +83,36 @@ if (obj_Pilot.Move == 0)
 			}
 		}
 	}
+	else if (image_index == 12)
+	{
+		// Cactus Fruit
+		var i;
+		var j = 0;
+		for (i = 0; i < array_length_1d(obj_GameManager.P_INV); i += 1)
+		{
+			if (obj_GameManager.P_INV[i] == 12)
+			{
+				obj_GameManager.P_INVC[i] += Count;
+				j = 1;
+				obj_GameManager.Text[0] = "Obtained < Prickly Pear [x" + string(Count) + "] >";
+				instance_destroy();
+				break;
+			}
+		}
+		if (j == 0)
+		{
+			for (i = 0; i < array_length_1d(obj_GameManager.P_INV); i += 1)
+			{
+				if (obj_GameManager.P_INV[i] == -1)
+				{
+					obj_GameManager.P_INV[i] = 12;
+					obj_GameManager.P_INVN[i] = "Prickly Pear"
+					obj_GameManager.P_INVC[i] = Count;
+					obj_GameManager.Text[0] = "Obtained < Prickly Pear [x" + string(Count) + "] >";
+					instance_destroy();
+					break;
+				}
+			}
+		}
+	}
 }

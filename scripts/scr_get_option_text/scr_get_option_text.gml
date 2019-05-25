@@ -76,6 +76,7 @@ else if (ob == "obj_Cactus")
 				obj_GameManager.Text[0] = "You drank some cactus juice.\nIt didn't taste very good...";
 				obj_GameManager.Text[1] = "Your THIRST went down by 10!";
 				obj_GameManager.P_THR += 10;
+				if (obj_GameManager.P_THR > 100) obj_GameManager.P_THR = 100;
 			}
 			else
 			{
@@ -89,7 +90,31 @@ else if (ob == "obj_Cactus")
 		}
 		else
 		{
-			obj_GameManager.Text[0] = "There is no more cactus juice left...";
+			obj_GameManager.Text[0] = "There is no more cactus juice left.";
+			obj_GameManager.OptionsCursor = 0;
+			obj_GameManager.Options = ["", "", "", ""];
+		}
+	}
+	else if (op == 1)
+	{
+		if (d.Op2 == 0)
+		{
+			if (irandom_range(1, 100) <= 20)
+			{
+				d.Op2 = 1;
+				obj_GameManager.Text[0] = "You collected some prickly pears...";
+			}
+			else
+			{
+				d.Op2 = 2;
+				obj_GameManager.Text[0] = "There is no fruit to collect.";
+			}
+			obj_GameManager.OptionsCursor = 0;
+			obj_GameManager.Options = ["", "", "", ""];
+		}
+		else
+		{
+			obj_GameManager.Text[0] = "There is no fruit to collect.";
 			obj_GameManager.OptionsCursor = 0;
 			obj_GameManager.Options = ["", "", "", ""];
 		}

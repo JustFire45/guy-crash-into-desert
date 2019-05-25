@@ -23,6 +23,9 @@ if (Options[0] != "")
 	draw_sprite(spr_Textbox, 1, camera_get_view_x(view_camera[0]) + 16, camera_get_view_y(view_camera[0]) + 106);
 	draw_sprite(spr_Textbox, 2, camera_get_view_x(view_camera[0]) + 16, camera_get_view_y(view_camera[0]) + 64 + (OptionsCursor * 14));
 	draw_text_ext(camera_get_view_x(view_camera[0]) + 40, camera_get_view_y(view_camera[0]) + 66, Options[0], 7, 1000);
+	draw_text_ext(camera_get_view_x(view_camera[0]) + 40, camera_get_view_y(view_camera[0]) + 80, Options[1], 7, 1000);
+	draw_text_ext(camera_get_view_x(view_camera[0]) + 40, camera_get_view_y(view_camera[0]) + 94, Options[2], 7, 1000);
+	draw_text_ext(camera_get_view_x(view_camera[0]) + 40, camera_get_view_y(view_camera[0]) + 108, Options[3], 7, 1000);
 }
 if (Text[0] != "")
 {
@@ -54,7 +57,7 @@ if (Options[0] != "")
 		else if (keyboard_check_pressed(vk_space) and Options[OptionsCursor] != "")
 		{
 			scr_get_option_text();
-			obj_GameManager.TextWait = 0;
+			TextWait = 0;
 			Text = [""];
 			Options = ["", "", "", ""];
 			OptionsCursor = 0;
@@ -65,6 +68,7 @@ if (Options[0] != "")
 // Progress Text
 else if (Text[0] != "")
 {
+	show_debug_message(Text[0]);
 	if (TextWait < 2) TextWait += 1;
 	if (keyboard_check_pressed(vk_space) and TextWait == 2)
 	{
