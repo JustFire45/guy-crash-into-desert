@@ -9,12 +9,18 @@ if (obj_Pilot.Move == 0)
 		var j = 0;
 		for (i = 0; i < array_length_1d(obj_GameManager.P_INV); i += 1)
 		{
-			if (obj_GameManager.P_INV[i] == 0)
+			if (obj_GameManager.P_INV[i] == 0 and obj_GameManager.P_INVC[i] < 10)
 			{
 				obj_GameManager.P_INVC[i] += Count;
+				Count = 0;
+				if (obj_GameManager.P_INVC[i] > 10)
+				{
+					Count = obj_GameManager.P_INVC[i] - 10;
+					obj_GameManager.P_INVC[i] = 10;
+				}
 				j = 1;
-				obj_GameManager.Text[0] = "Obtained < Match [x" + string(Count) + "] >";
-				instance_destroy();
+				obj_GameManager.Text[0] = "You picked up some matches.";
+				if (Count <= 0) instance_destroy();
 				break;
 			}
 		}
@@ -27,8 +33,14 @@ if (obj_Pilot.Move == 0)
 					obj_GameManager.P_INV[i] = 0;
 					obj_GameManager.P_INVN[i] = "Match"
 					obj_GameManager.P_INVC[i] = Count;
-					obj_GameManager.Text[0] = "Obtained < Match [x" + string(Count) + "] >";
-					instance_destroy();
+					Count = 0;
+					if (obj_GameManager.P_INVC[i] > 10)
+					{
+						Count = obj_GameManager.P_INVC[i] - 10;
+						obj_GameManager.P_INVC[i] = 10;
+					}
+					obj_GameManager.Text[0] = "You picked up some matches.";
+					if (Count <= 0) instance_destroy();
 					break;
 				}
 			}
@@ -45,7 +57,7 @@ if (obj_Pilot.Move == 0)
 				obj_GameManager.P_INV[i] = 3;
 				obj_GameManager.P_INVN[i] = "Water Bottle"
 				obj_GameManager.P_INVC[i] = Count;
-				obj_GameManager.Text[0] = "Obtained < Water Bottle [x" + string(Count) + "] >";
+				obj_GameManager.Text[0] = "You picked up a water bottle.";
 				instance_destroy();
 				break;
 			}
@@ -58,12 +70,18 @@ if (obj_Pilot.Move == 0)
 		var j = 0;
 		for (i = 0; i < array_length_1d(obj_GameManager.P_INV); i += 1)
 		{
-			if (obj_GameManager.P_INV[i] == 7)
+			if (obj_GameManager.P_INV[i] == 7 and obj_GameManager.P_INVC[i] < 4)
 			{
 				obj_GameManager.P_INVC[i] += Count;
+				Count = 0;
+				if (obj_GameManager.P_INVC[i] > 4)
+				{
+					Count = obj_GameManager.P_INVC[i] - 4;
+					obj_GameManager.P_INVC[i] = 4;
+				}
 				j = 1;
-				obj_GameManager.Text[0] = "Obtained < Metal Scrap [x" + string(Count) + "] >";
-				instance_destroy();
+				obj_GameManager.Text[0] = "You picked up some metal scraps.";
+				if (Count <= 0) instance_destroy();
 				break;
 			}
 		}
@@ -76,8 +94,14 @@ if (obj_Pilot.Move == 0)
 					obj_GameManager.P_INV[i] = 7;
 					obj_GameManager.P_INVN[i] = "Metal Scrap"
 					obj_GameManager.P_INVC[i] = Count;
-					obj_GameManager.Text[0] = "Obtained < Metal Scrap [x" + string(Count) + "] >";
-					instance_destroy();
+					Count = 0;
+					if (obj_GameManager.P_INVC[i] > 4)
+					{
+						Count = obj_GameManager.P_INVC[i] - 4;
+						obj_GameManager.P_INVC[i] = 4;
+					}
+					obj_GameManager.Text[0] = "You picked up some metal scraps.";
+					if (Count <= 0) instance_destroy();
 					break;
 				}
 			}
@@ -90,12 +114,18 @@ if (obj_Pilot.Move == 0)
 		var j = 0;
 		for (i = 0; i < array_length_1d(obj_GameManager.P_INV); i += 1)
 		{
-			if (obj_GameManager.P_INV[i] == 12)
+			if (obj_GameManager.P_INV[i] == 12 and obj_GameManager.P_INVC[i] < 2)
 			{
 				obj_GameManager.P_INVC[i] += Count;
+				Count = 0;
+				if (obj_GameManager.P_INVC[i] > 2)
+				{
+					Count = obj_GameManager.P_INVC[i] - 2;
+					obj_GameManager.P_INVC[i] = 2;
+				}
 				j = 1;
-				obj_GameManager.Text[0] = "Obtained < Prickly Pear [x" + string(Count) + "] >";
-				instance_destroy();
+				obj_GameManager.Text[0] = "You picked up some prickly pears.";
+				if (Count <= 0) instance_destroy();
 				break;
 			}
 		}
@@ -108,8 +138,14 @@ if (obj_Pilot.Move == 0)
 					obj_GameManager.P_INV[i] = 12;
 					obj_GameManager.P_INVN[i] = "Prickly Pear"
 					obj_GameManager.P_INVC[i] = Count;
-					obj_GameManager.Text[0] = "Obtained < Prickly Pear [x" + string(Count) + "] >";
-					instance_destroy();
+					Count = 0;
+					if (obj_GameManager.P_INVC[i] > 2)
+					{
+						Count = obj_GameManager.P_INVC[i] - 2;
+						obj_GameManager.P_INVC[i] = 2;
+					}
+					obj_GameManager.Text[0] = "You picked up some prickly pears.";
+					if (Count <= 0) instance_destroy();
 					break;
 				}
 			}
