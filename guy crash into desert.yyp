@@ -127,6 +127,14 @@
             }
         },
         {
+            "Key": "49fd6c71-80cc-4c06-9759-54eabfeb1ba8",
+            "Value": {
+                "id": "126d7a97-d5ab-41f8-8d77-43dd9588a7c5",
+                "resourcePath": "sprites\\spr_SunMoon\\spr_SunMoon.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4eb2042d-a110-4021-8abc-1f9ecc6a74b7",
             "Value": {
                 "id": "f0d1354e-21bc-4ff4-955c-4940efceeca4",

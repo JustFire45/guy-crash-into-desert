@@ -3,13 +3,25 @@
 // Set Font
 draw_set_font(fnt_PixelFive);
 
-// FPS + Coordinates + MiniBars
+// Day/Night Cycle
+
+var hr = 0;
+if (Hour <= 12) hr = Hour;
+else hr = 24 - Hour;
+draw_set_alpha(hr / 16);
+draw_rectangle_colour(camera_get_view_x(view_camera[0]), camera_get_view_y(view_camera[0]), camera_get_view_x(view_camera[0]) + 256, camera_get_view_y(view_camera[0]) + 144, c_black, c_black, c_black, c_black, 0);
+draw_set_alpha(1)
+
+// MiniBars + Sun/Moon
 draw_sprite(spr_MiniBars, 0, camera_get_view_x(view_camera[0]) + 1, camera_get_view_y(view_camera[0]) + 1);
 draw_sprite(spr_MiniBars, 0, camera_get_view_x(view_camera[0]) + 1, camera_get_view_y(view_camera[0]) + 7);
 draw_sprite(spr_MiniBars, 0, camera_get_view_x(view_camera[0]) + 1, camera_get_view_y(view_camera[0]) + 13);
 draw_sprite_ext(spr_MiniBars, 1, camera_get_view_x(view_camera[0]) + 2, camera_get_view_y(view_camera[0]) + 1, ceil(P_HP / 2), 1, 0, c_white, 1);
 draw_sprite_ext(spr_MiniBars, 2, camera_get_view_x(view_camera[0]) + 2, camera_get_view_y(view_camera[0]) + 7, ceil(P_HNG / 2), 1, 0, c_white, 1);
 draw_sprite_ext(spr_MiniBars, 3, camera_get_view_x(view_camera[0]) + 2, camera_get_view_y(view_camera[0]) + 13, ceil(P_THR / 2), 1, 0, c_white, 1);
+var spr = 0;
+if (Hour > 6 and Hour < 18) spr = 1;
+draw_sprite(spr_SunMoon, spr, camera_get_view_x(view_camera[0]) + 54, camera_get_view_y(view_camera[0]) + 1);
 
 // Text + Textbox
 if (Options[0] != "")

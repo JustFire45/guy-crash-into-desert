@@ -17,12 +17,12 @@ if (test == 1)
 }
 
 // Other
-if (Steps >= 30) DSF_Smoke = 0;
-else if (Steps >= 25) DSF_Smoke = 19;
-else if (Steps >= 20) DSF_Smoke = 5;
-else if (Steps >= 15) DSF_Smoke = 4;
-else if (Steps >= 10) DSF_Smoke = 3;
-else if (Steps >= 5) DSF_Smoke = 2;
+if (Steps > 12) DSF_Smoke = 0;
+else if (Steps >= 10) DSF_Smoke = 19;
+else if (Steps >= 8) DSF_Smoke = 5;
+else if (Steps >= 6) DSF_Smoke = 4;
+else if (Steps >= 4) DSF_Smoke = 3;
+else if (Steps >= 2) DSF_Smoke = 2;
 
 // Open / Close Inventory
 if (keyboard_check_pressed(vk_tab) and obj_Pilot.Move == 0 and Text[0] == "" and InventoryOption == 0) Inventory *= -1;

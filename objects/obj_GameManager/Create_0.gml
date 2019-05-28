@@ -3,9 +3,10 @@
 // Randomize Seed
 randomize();
 
-// Delta Time + Depth
+// Delta Time & Depth & Day Cycle
 DT = 0;
 depth = -14000;
+Hour = 0;
 
 // Player Stats
 P_HP = 100;
