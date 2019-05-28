@@ -8,7 +8,7 @@ if (a > 0 and a < 5)
 {
 	if (obj_GameManager.P_THR <= 75)
 	{
-		Text[0] = "You drank some water.\nTHIRST went down by 25!";
+		Text[0] = "You drank some water.\nYou became less thirsty (25).";
 		a += 1;
 		obj_GameManager.P_INV[obj_GameManager.InventorySelect] = a;
 		if (a >= 5) obj_GameManager.P_INVN[obj_GameManager.InventorySelect] = "Empty Water Bottle";

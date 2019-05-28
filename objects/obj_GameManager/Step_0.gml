@@ -4,12 +4,13 @@
 DT += 1;
 
 // Debug
-var test = 0;
+var test = 1;
 if (test == 1)
 {
 	show_debug_message("Seed: " + string(random_get_seed()));
 	show_debug_message("Inventory: " + string(Inventory));
 	show_debug_message("InventoryOption: " + string(InventoryOption));
+	show_debug_message("OptionsCursor: " + string(OptionsCursor));
 	show_debug_message("");
 	
 	if (keyboard_check_pressed(ord("R"))) room_restart();

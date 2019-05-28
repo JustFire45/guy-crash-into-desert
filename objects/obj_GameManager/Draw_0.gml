@@ -58,9 +58,9 @@ if (Options[0] != "")
 		{
 			TextWait = 0;
 			Text = [""];
+			scr_get_option_text();
 			Options = ["", "", "", ""];
 			OptionsCursor = 0;
-			scr_get_option_text();
 		}
 	}
 }
@@ -68,7 +68,6 @@ if (Options[0] != "")
 // Progress Text
 else if (Text[0] != "")
 {
-	show_debug_message(Text[0]);
 	if (TextWait < 2) TextWait += 1;
 	if (keyboard_check_pressed(vk_space) and TextWait == 2)
 	{
