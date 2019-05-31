@@ -13,7 +13,7 @@ if (Op2 == 1 and obj_GameManager.Text[0] == "")
 		if (!position_meeting(obj_Pilot.x + sqrsX[i], obj_Pilot.y + sqrsY[i], obj_Wall) and !position_meeting(obj_Pilot.x + sqrsX[i], obj_Pilot.y + sqrsY[i], obj_GroundItem))
 		{
 			var j = instance_create_depth(obj_Pilot.x + sqrsX[i], obj_Pilot.y + sqrsY[i], 0, obj_GroundItem);
-			j.image_index = 12;
+			j.image_index = 9;
 			j.Count = choose(1, 2);
 			break;
 		}
