@@ -17,7 +17,7 @@ if (obj_GameManager.Text[0] == "" and obj_GameManager.Inventory == -1)
 	if (Move == 0)
 	{
 		// Test For Running
-		if (keyboard_check(vk_space)) Run = 1;
+		if (keyboard_check(vk_space) && obj_GameManager.P_THR > 20 && obj_GameManager.P_HNG > 20) Run = 1;
 		else Run = -1;
 		
 		// Set Motion
