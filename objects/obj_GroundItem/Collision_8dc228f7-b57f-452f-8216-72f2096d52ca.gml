@@ -46,6 +46,40 @@ if (obj_Pilot.Move == 0)
 			}
 		}
 	}
+	else if (image_index == 1)
+	{
+		// Water Bottle (100%)
+		var i;
+		for (i = 0; i < array_length_1d(obj_GameManager.P_INV); i += 1)
+		{
+			if (obj_GameManager.P_INV[i] == -1)
+			{
+				obj_GameManager.P_INV[i] = 1;
+				obj_GameManager.P_INVN[i] = "Water Bottle"
+				obj_GameManager.P_INVC[i] = Count;
+				obj_GameManager.Text[0] = "You picked up a water bottle.";
+				instance_destroy();
+				break;
+			}
+		}
+	}
+	else if (image_index == 2)
+	{
+		// Water Bottle (75%)
+		var i;
+		for (i = 0; i < array_length_1d(obj_GameManager.P_INV); i += 1)
+		{
+			if (obj_GameManager.P_INV[i] == -1)
+			{
+				obj_GameManager.P_INV[i] = 2;
+				obj_GameManager.P_INVN[i] = "Water Bottle"
+				obj_GameManager.P_INVC[i] = Count;
+				obj_GameManager.Text[0] = "You picked up a water bottle.";
+				instance_destroy();
+				break;
+			}
+		}
+	}
 	else if (image_index == 3)
 	{
 		// Water Bottle (50%)
@@ -55,6 +89,23 @@ if (obj_Pilot.Move == 0)
 			if (obj_GameManager.P_INV[i] == -1)
 			{
 				obj_GameManager.P_INV[i] = 3;
+				obj_GameManager.P_INVN[i] = "Water Bottle"
+				obj_GameManager.P_INVC[i] = Count;
+				obj_GameManager.Text[0] = "You picked up a water bottle.";
+				instance_destroy();
+				break;
+			}
+		}
+	}
+	else if (image_index == 3)
+	{
+		// Water Bottle (25%)
+		var i;
+		for (i = 0; i < array_length_1d(obj_GameManager.P_INV); i += 1)
+		{
+			if (obj_GameManager.P_INV[i] == -1)
+			{
+				obj_GameManager.P_INV[i] = 4;
 				obj_GameManager.P_INVN[i] = "Water Bottle"
 				obj_GameManager.P_INVC[i] = Count;
 				obj_GameManager.Text[0] = "You picked up a water bottle.";
