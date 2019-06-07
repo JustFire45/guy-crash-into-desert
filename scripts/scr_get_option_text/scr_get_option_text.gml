@@ -120,3 +120,50 @@ else if (ob == "obj_Cactus")
 		}
 	}
 }
+else if (ob == "obj_WoodenPlane")
+{
+	if (op == 0)
+	{
+		if (d.Op1 == 0)
+		{
+			d.Op1 = 1;
+			obj_GameManager.Text[0] = "You search for any salvageable items...";
+			obj_GameManager.OptionsCursor = 0;
+			obj_GameManager.Options = ["", "", "", ""];
+		}
+		else
+		{
+			obj_GameManager.Text[0] = "You search for any salvageable items...\n...but you find nothing.";
+			obj_GameManager.OptionsCursor = 0;
+			obj_GameManager.Options = ["", "", "", ""];
+		}
+		obj_GameManager.OptionsCursor = 0;
+		obj_GameManager.Options = ["", "", "", ""];
+	}
+	else if (op == 1)
+	{
+		if (d.Op2 == 0)
+		{
+			var j = -1;
+			var i;
+			for (i = 0; i < array_length_1d(obj_GameManager.P_INV); i += 1) { if (i == "0") j = i; }
+			if (j > -1)
+			{
+				d.Op2 = 1;
+				obj_GameManager.P_INVC[j] -= 1;
+				obj_GameManager.Text[0] = "You lit a match and threw it.\nThe plane burns down.";
+			}
+			else obj_GameManager.Text[0] = "You attemped to burn down the plane...\n...but you don't have a match.";
+			obj_GameManager.OptionsCursor = 0;
+			obj_GameManager.Options = ["", "", "", ""];
+		}
+		else
+		{
+			obj_GameManager.Text[0] = "You search for any salvageable items...\n...but you find nothing.";
+			obj_GameManager.OptionsCursor = 0;
+			obj_GameManager.Options = ["", "", "", ""];
+		}
+		obj_GameManager.OptionsCursor = 0;
+		obj_GameManager.Options = ["", "", "", ""];
+	}
+}
