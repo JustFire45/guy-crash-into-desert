@@ -49,3 +49,12 @@ if (obj_GameManager.Text[0] == "" and obj_GameManager.Inventory == -1)
 		}
 	}
 }
+
+//Hunger Shit
+if (obj_GameManager.P_HNG <= 0) alarm[0] = 300;
+
+//Thirst Shit
+if (obj_GameManager.P_THR <= 0) alarm[1] = 300;
+
+//Death Shit
+if (obj_GameManager.P_HP <= 0) instance_destroy();
