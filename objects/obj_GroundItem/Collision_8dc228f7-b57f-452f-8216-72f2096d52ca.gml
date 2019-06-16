@@ -7,7 +7,7 @@ if (obj_Pilot.Move == 0)
 		// Match
 		var i;
 		var j = 0;
-		for (i = 0; i < array_length_1d(obj_GameManager.P_INV); i += 1)
+		for (i = 0; i < obj_GameManager.P_INVS; i += 1)
 		{
 			if (obj_GameManager.P_INV[i] == image_index and obj_GameManager.P_INVC[i] < 10)
 			{
@@ -26,7 +26,7 @@ if (obj_Pilot.Move == 0)
 		}
 		if (j == 0)
 		{
-			for (i = 0; i < array_length_1d(obj_GameManager.P_INV); i += 1)
+			for (i = 0; i < obj_GameManager.P_INVS; i += 1)
 			{
 				if (obj_GameManager.P_INV[i] == -1)
 				{
@@ -50,7 +50,7 @@ if (obj_Pilot.Move == 0)
 	{
 		// Water Bottle (100%)
 		var i;
-		for (i = 0; i < array_length_1d(obj_GameManager.P_INV); i += 1)
+		for (i = 0; i < obj_GameManager.P_INVS; i += 1)
 		{
 			if (obj_GameManager.P_INV[i] == -1)
 			{
@@ -67,7 +67,7 @@ if (obj_Pilot.Move == 0)
 	{
 		// Water Bottle (75%)
 		var i;
-		for (i = 0; i < array_length_1d(obj_GameManager.P_INV); i += 1)
+		for (i = 0; i < obj_GameManager.P_INVS; i += 1)
 		{
 			if (obj_GameManager.P_INV[i] == -1)
 			{
@@ -84,7 +84,7 @@ if (obj_Pilot.Move == 0)
 	{
 		// Water Bottle (50%)
 		var i;
-		for (i = 0; i < array_length_1d(obj_GameManager.P_INV); i += 1)
+		for (i = 0; i < obj_GameManager.P_INVS; i += 1)
 		{
 			if (obj_GameManager.P_INV[i] == -1)
 			{
@@ -101,7 +101,7 @@ if (obj_Pilot.Move == 0)
 	{
 		// Water Bottle (25%)
 		var i;
-		for (i = 0; i < array_length_1d(obj_GameManager.P_INV); i += 1)
+		for (i = 0; i < obj_GameManager.P_INVS; i += 1)
 		{
 			if (obj_GameManager.P_INV[i] == -1)
 			{
@@ -118,7 +118,7 @@ if (obj_Pilot.Move == 0)
 	{
 		// Water Bottle (0%)
 		var i;
-		for (i = 0; i < array_length_1d(obj_GameManager.P_INV); i += 1)
+		for (i = 0; i < obj_GameManager.P_INVS; i += 1)
 		{
 			if (obj_GameManager.P_INV[i] == -1)
 			{
@@ -136,7 +136,7 @@ if (obj_Pilot.Move == 0)
 		// Charcoal
 		var i;
 		var j = 0;
-		for (i = 0; i < array_length_1d(obj_GameManager.P_INV); i += 1)
+		for (i = 0; i < obj_GameManager.P_INVS; i += 1)
 		{
 			if (obj_GameManager.P_INV[i] == image_index and obj_GameManager.P_INVC[i] < 5)
 			{
@@ -155,7 +155,7 @@ if (obj_Pilot.Move == 0)
 		}
 		if (j == 0)
 		{
-			for (i = 0; i < array_length_1d(obj_GameManager.P_INV); i += 1)
+			for (i = 0; i < obj_GameManager.P_INVS; i += 1)
 			{
 				if (obj_GameManager.P_INV[i] == -1)
 				{
@@ -180,7 +180,7 @@ if (obj_Pilot.Move == 0)
 		// Metal Scrap
 		var i;
 		var j = 0;
-		for (i = 0; i < array_length_1d(obj_GameManager.P_INV); i += 1)
+		for (i = 0; i < obj_GameManager.P_INVS; i += 1)
 		{
 			if (obj_GameManager.P_INV[i] == image_index and obj_GameManager.P_INVC[i] < 4)
 			{
@@ -199,7 +199,7 @@ if (obj_Pilot.Move == 0)
 		}
 		if (j == 0)
 		{
-			for (i = 0; i < array_length_1d(obj_GameManager.P_INV); i += 1)
+			for (i = 0; i < obj_GameManager.P_INVS; i += 1)
 			{
 				if (obj_GameManager.P_INV[i] == -1)
 				{
@@ -223,7 +223,7 @@ if (obj_Pilot.Move == 0)
 	{
 		// Nutrition Bar
 		var i;
-		for (i = 0; i < array_length_1d(obj_GameManager.P_INV); i += 1)
+		for (i = 0; i < obj_GameManager.P_INVS; i += 1)
 		{
 			if (obj_GameManager.P_INV[i] == -1)
 			{
@@ -241,7 +241,7 @@ if (obj_Pilot.Move == 0)
 		// Cactus Fruit
 		var i;
 		var j = 0;
-		for (i = 0; i < array_length_1d(obj_GameManager.P_INV); i += 1)
+		for (i = 0; i < obj_GameManager.P_INVS; i += 1)
 		{
 			if (obj_GameManager.P_INV[i] == image_index and obj_GameManager.P_INVC[i] < 2)
 			{
@@ -260,7 +260,7 @@ if (obj_Pilot.Move == 0)
 		}
 		if (j == 0)
 		{
-			for (i = 0; i < array_length_1d(obj_GameManager.P_INV); i += 1)
+			for (i = 0; i < obj_GameManager.P_INVS; i += 1)
 			{
 				if (obj_GameManager.P_INV[i] == -1)
 				{
@@ -278,6 +278,36 @@ if (obj_Pilot.Move == 0)
 					break;
 				}
 			}
+		}
+	}
+	else if (image_index == 10)
+	{
+		// Sack
+		if (obj_GameManager.P_INVS < 8)
+		{
+			obj_GameManager.P_INVS = 8;
+			obj_GameManager.Text[0] = "Your inventory space has been increased (8).";
+			instance_destroy();
+		}
+	}
+	else if (image_index == 11)
+	{
+		// Backpack
+		if (obj_GameManager.P_INVS < 12)
+		{
+			obj_GameManager.P_INVS = 12;
+			obj_GameManager.Text[0] = "Your inventory space has been increased (12).";
+			instance_destroy();
+		}
+	}
+	else if (image_index == 12)
+	{
+		// Littni Box
+		if (obj_GameManager.P_INVS < 16)
+		{
+			obj_GameManager.P_INVS = 16;
+			obj_GameManager.Text[0] = "Your inventory space has been increased (16).";
+			instance_destroy();
 		}
 	}
 }

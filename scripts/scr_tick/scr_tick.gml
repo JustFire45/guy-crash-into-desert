@@ -7,6 +7,10 @@ obj_GameManager.Steps += 1;
 obj_GameManager.Hour += 0.25;
 if (obj_GameManager.Hour >= 24) obj_GameManager.Hour = 0;
 
+// Heal
+if (obj_GameManager.P_THR > 90 and obj_GameManager.P_HNG > 90 and obj_GameManager.Steps mod 5 == 0) obj_GameManager.P_HP += choose(1, 2);
+if (obj_GameManager.P_HP > 100) obj_GameManager.P_HP = 100;
+
 // Hunger
 obj_GameManager.HungerTick -= 1;
 if (obj_GameManager.HungerTick <= 0)

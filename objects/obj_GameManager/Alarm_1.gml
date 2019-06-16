@@ -8,9 +8,9 @@ for (yy = 0; yy < 1000; yy += 1)
 	for (xx = 0; xx < 1000; xx += 1) Map[xx, yy] = 0;
 }
 
-// Add "obj_House" x20
+// Add "obj_House" x35
 var i = 0;
-while (i < 20)
+while (i < 35)
 {
 	var xx = irandom_range(4, 990);
 	var yy = irandom_range(4, 990);
@@ -22,9 +22,9 @@ while (i < 20)
 	}
 }
 
-// Add "obj_WoodenPlane" x40
+// Add "obj_WoodenPlane" x70
 var i = 0;
-while (i < 40)
+while (i < 70)
 {
 	var xx = irandom_range(4, 990);
 	var yy = irandom_range(4, 990);

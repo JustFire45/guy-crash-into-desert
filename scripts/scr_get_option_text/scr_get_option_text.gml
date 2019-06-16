@@ -167,3 +167,24 @@ else if (ob == "obj_WoodenPlane")
 		obj_GameManager.Options = ["", "", "", ""];
 	}
 }
+else if (ob == "obj_House")
+{
+	if (op == 0)
+	{
+		if (d.Op1 == 0)
+		{
+			d.Op1 = 1;
+			obj_GameManager.Text[0] = "You search the house...";
+			obj_GameManager.OptionsCursor = 0;
+			obj_GameManager.Options = ["", "", "", ""];
+		}
+		else
+		{
+			obj_GameManager.Text[0] = "You search the house...\n...but you find nothing.";
+			obj_GameManager.OptionsCursor = 0;
+			obj_GameManager.Options = ["", "", "", ""];
+		}
+		obj_GameManager.OptionsCursor = 0;
+		obj_GameManager.Options = ["", "", "", ""];
+	}
+}
