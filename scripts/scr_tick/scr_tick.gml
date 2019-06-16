@@ -7,6 +7,9 @@ obj_GameManager.Steps += 1;
 obj_GameManager.Hour += 0.25;
 if (obj_GameManager.Hour >= 24) obj_GameManager.Hour = 0;
 
+// Hunger and Thirst Damage
+if (obj_GameManager.P_HNG <= 0 or obj_GameManager.P_THR <= 0) obj_GameManager.P_HP -= choose(2, 3);
+
 // Heal
 if (obj_GameManager.P_THR > 90 and obj_GameManager.P_HNG > 90 and obj_GameManager.Steps mod 5 == 0) obj_GameManager.P_HP += choose(1, 2);
 if (obj_GameManager.P_HP > 100) obj_GameManager.P_HP = 100;

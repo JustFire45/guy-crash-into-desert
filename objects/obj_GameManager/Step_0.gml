@@ -9,7 +9,7 @@ if (TrackT <= 0)
 {
 	audio_stop_all();
 	Track *= -1;
-	TrackT = irandom_range(180, 240);
+	TrackT = irandom_range(120, 180);
 	audio_play_sound(0.5 + Track, 0, 0);
 }
 

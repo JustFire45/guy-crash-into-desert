@@ -17,7 +17,7 @@ while (i < 35)
 	if (!position_meeting(xx * 16, yy * 16, obj_Wall) and !position_meeting(xx * 16, yy * 16, obj_Pilot))
 	{
 		i += 1;
-		Map[xx, yy] = 2;
+		Map[xx, yy] = 4;
 		instance_create_depth(xx * 16, yy * 16, 0, obj_House);
 	}
 }
@@ -62,4 +62,20 @@ while (i < 4000)
 		Map[xx, yy] = 1;
 		instance_create_depth(xx * 16, yy * 16, 0, obj_Cactus);
 	}
-}	
+}
+
+// Add "obj_Base" x1
+if (choose(1, 2) == 1)
+{
+	var xx = choose(64, 15808);
+	var yy = irandom_range(64, 15808);
+	Map[xx, yy] = 5;
+	instance_create_depth(xx * 16, yy * 16, 0, obj_Base);
+}
+else
+{
+	var xx = irandom_range(64, 15808);
+	var yy = choose(64, 15808);
+	Map[xx, yy] = 5;
+	instance_create_depth(xx * 16, yy * 16, 0, obj_Base);
+}
