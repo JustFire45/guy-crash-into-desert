@@ -3,6 +3,16 @@
 // Increment Delta Time
 DT += 1;
 
+// Play Song
+if (DT mod 60 == 0) TrackT -= 1;
+if (TrackT <= 0)
+{
+	audio_stop_all();
+	Track *= -1;
+	TrackT = irandom_range(180, 240);
+	audio_play_sound(0.5 + Track, 0, 0);
+}
+
 // Debug
 var test = 1;
 if (test == 1)

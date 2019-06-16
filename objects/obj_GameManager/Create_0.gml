@@ -3,10 +3,12 @@
 // Randomize Seed
 randomize();
 
-// Delta Time & Depth & Day Cycle
+// Other Variables
 DT = 0;
 depth = -14000;
 Hour = 0;
+Track = 0.5;
+TrackT = irandom_range(180, 240);
 
 // Player Stats
 P_HP = 100;
