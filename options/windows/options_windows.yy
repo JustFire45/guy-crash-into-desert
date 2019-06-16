@@ -5,12 +5,12 @@
     "name": "Windows",
     "option_windows_allow_fullscreen_switching": true,
     "option_windows_borderless": false,
-    "option_windows_company_info": "ORIGAMe STUDIOS \/ JustFire45",
+    "option_windows_company_info": "ORIGAMe STUDIOS \/ JustFire45 \/ peanutbuuter \/ TheDude646",
     "option_windows_copy_exe_to_dest": false,
-    "option_windows_copyright_info": "(c) 2019 ORIGAMe STUDIOS \/ JustFire45",
-    "option_windows_description_info": "some shitty student project.",
+    "option_windows_copyright_info": "(c) 2019 ORIGAMe STUDIOS \/ JustFire45 \/ peanutbuuter \/ TheDude646",
+    "option_windows_description_info": "Some shitty student project about a war plane pilot who's been shot down into the desert.",
     "option_windows_display_cursor": true,
-    "option_windows_display_name": "guy crash into desert v0.0.1.1",
+    "option_windows_display_name": "guy crash into desert",
     "option_windows_enable_steam": false,
     "option_windows_executable_name": "${project_name}",
     "option_windows_icon": "${options_dir}\\windows\\icons\\icon.ico",
@@ -29,10 +29,10 @@
     "option_windows_texture_page": "2048x2048",
     "option_windows_use_splash": false,
     "option_windows_version": {
-        "build": 1,
+        "build": 0,
         "major": 0,
         "minor": 0,
-        "revision": 1
+        "revision": 0
     },
     "option_windows_vsync": true
 }
