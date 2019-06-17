@@ -223,14 +223,6 @@
             }
         },
         {
-            "Key": "74325ddf-02f3-42ba-b4e1-1e40e8ff231e",
-            "Value": {
-                "id": "03310da1-b609-4ab1-ab66-4f23d6e7af25",
-                "resourcePath": "sprites\\spr_CampfireOut\\spr_CampfireOut.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "756cac57-a20e-4e64-9149-e77ae4f1c6c4",
             "Value": {
                 "id": "9eb6f7aa-e8ea-4e02-be03-df05dab3fcec",

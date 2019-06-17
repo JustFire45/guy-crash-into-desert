@@ -22,7 +22,7 @@ if (test == 1)
 	show_debug_message("");
 	
 	if (keyboard_check_pressed(ord("R"))) room_restart();
-	if (keyboard_check_pressed(ord("E"))) room_goto(rm_Credits);
+	if (keyboard_check_pressed(ord("0"))) room_goto(rm_Credits);
 }
 
 // Other

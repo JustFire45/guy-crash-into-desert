@@ -71,7 +71,6 @@ with (obj_Campfire)
 	Burn -= 1;
 	if (Burn <= 0)
 	{
-		sprite_index = spr_CampfireOut;
-		image_index = 0;
+		instance_destroy();
 	}
 }

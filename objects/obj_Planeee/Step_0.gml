@@ -1,7 +1,8 @@
 /// Step
 
-// Fly Into View
+// Fly Into/Out Of View
 if (y < 56) y += 1;
+if (y < 150 and FadeInc > 0) y += 1;
 
 // Smoke
 if (choose(0, 1) == 1)

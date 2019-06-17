@@ -20,21 +20,25 @@ if (a == 0)
 	{
 		if (obj_GameManager.P_INVC[i] >= 5)
 		{
-			obj_GameManager.P_INVC[obj_GameManager.InventorySelect] -= 1;
-			if (obj_GameManager.P_INVC[obj_GameManager.InventorySelect] <= 0)
+			if ((obj_Pilot.Dir == 0 and position_meeting(obj_Pilot.x + 20, obj_Pilot.y + 4, obj_Wall)) or (obj_Pilot.Dir == 1 and position_meeting(obj_Pilot.x + 4, obj_Pilot.y - 8, obj_Wall)) or (obj_Pilot.Dir == 2 and position_meeting(obj_Pilot.x - 8, obj_Pilot.y + 4, obj_Wall)) or (obj_Pilot.Dir == 3 and position_meeting(obj_Pilot.x + 4, obj_Pilot.y +	20, obj_Wall))) Text[0] = "You can't start a campfire in this direction.";
+			else
 			{
-				obj_GameManager.P_INV[obj_GameManager.InventorySelect] = -1;
-				obj_GameManager.P_INVN[obj_GameManager.InventorySelect] = "";
-				obj_GameManager.P_INVC[obj_GameManager.InventorySelect] = 0;
+				obj_GameManager.P_INVC[obj_GameManager.InventorySelect] -= 1;
+				if (obj_GameManager.P_INVC[obj_GameManager.InventorySelect] <= 0)
+				{
+					obj_GameManager.P_INV[obj_GameManager.InventorySelect] = -1;
+					obj_GameManager.P_INVN[obj_GameManager.InventorySelect] = "";
+					obj_GameManager.P_INVC[obj_GameManager.InventorySelect] = 0;
+				}
+				obj_GameManager.P_INV[i] = -1;
+				obj_GameManager.P_INVN[i] = "";
+				obj_GameManager.P_INVC[i] = 0;
+				Text[0] = "You placed some charcoal down and threw a match...\nUpon hitting the charcoal, a fire starts.";
+				if (obj_Pilot.Dir == 0) instance_create_depth(obj_Pilot.x + 16, obj_Pilot.y, 0, obj_Campfire);
+				else if (obj_Pilot.Dir == 1) instance_create_depth(obj_Pilot.x, obj_Pilot.y - 16, 0, obj_Campfire);
+				else if (obj_Pilot.Dir == 2) instance_create_depth(obj_Pilot.x - 16, obj_Pilot.y, 0, obj_Campfire);
+				else if (obj_Pilot.Dir == 3) instance_create_depth(obj_Pilot.x, obj_Pilot.y + 16, 0, obj_Campfire);
 			}
-			obj_GameManager.P_INV[i] = -1;
-			obj_GameManager.P_INVN[i] = "";
-			obj_GameManager.P_INVC[i] = 0;
-			Text[0] = "You placed some charcoal down and threw a match...\nUpon hitting the charcoal, a fire starts.";
-			if (obj_Pilot.Dir == 0) instance_create_depth(x + 16, y, 0, obj_Campfire);
-			else if (obj_Pilot.Dir == 1) instance_create_depth(x, y - 16, 0, obj_Campfire);
-			else if (obj_Pilot.Dir == 2) instance_create_depth(x - 16, y, 0, obj_Campfire);
-			else if (obj_Pilot.Dir == 3) instance_create_depth(x, y + 16, 0, obj_Campfire);
 		}
 		else Text[0] = "You need more charcoal to start a fire...";
 	}

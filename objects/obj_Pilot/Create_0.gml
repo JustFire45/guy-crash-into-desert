@@ -8,7 +8,7 @@ obj_CameraObject.y = y + 8;
 // Variables
 image_speed = 0;
 Move = 0;
-Dir = 0;
+Dir = 3;
 Run = -1;
 
 // Map Keys
