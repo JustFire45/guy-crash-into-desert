@@ -37,6 +37,8 @@ if (Op1 == 1 and obj_GameManager.Text[0] == "")
 else if (Op2 == 1 and obj_GameManager.Text[0] == "")
 {
 	Op2 = 2;
+	var sqrsX = [0, 0, -16, 16, -16, -16, 16, 16];
+	var sqrsY = [-16, 16, 0, 0, 16, -16, 16, -16];
 	for (i = 0; i < 8; i += 1)
 	{
 		// Charcoal [x3~4]
@@ -48,4 +50,4 @@ else if (Op2 == 1 and obj_GameManager.Text[0] == "")
 			break;
 		}
 	}
-}
+}d

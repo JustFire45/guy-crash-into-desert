@@ -83,7 +83,7 @@ if (Inventory > 0)
 		else if (keyboard_check_pressed(vk_right) and InventoryOption < 2) InventoryOption += 1;
 	}
 	
-	// Reset "InventoryOption" (quick solution, probably not good in the long run idk. it depends)
+	// Reset "InventoryOption"
 	if (InventoryOption == 3) InventoryOption = 0;
 }
 else

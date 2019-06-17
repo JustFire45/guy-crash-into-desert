@@ -6,7 +6,7 @@ scr_tick();
 
 if (a > 0 and a < 5)
 {
-	if (obj_GameManager.P_THR <= 80)
+	if (obj_GameManager.P_THR < 90)
 	{
 		Text[0] = "You drank some water.\nYou became less thirsty (25).";
 		a += 1;
@@ -19,7 +19,7 @@ if (a > 0 and a < 5)
 }
 else if (a == 8)
 {
-	if (obj_GameManager.P_HNG <= 80)
+	if (obj_GameManager.P_HNG < 90)
 	{
 		Text[0] = "You ate the nutrition bar.\nYou became less hungry (50).";
 		obj_GameManager.P_INV[obj_GameManager.InventorySelect] = -1;
@@ -32,7 +32,7 @@ else if (a == 8)
 }
 else if (a == 9)
 {
-	if (obj_GameManager.P_HNG <= 75)
+	if (obj_GameManager.P_HNG < 90)
 	{
 		Text[0] = "You carefully cut open the prickly pear and ate it.\nYou became less hungry (25).";
 		obj_GameManager.P_INVC[obj_GameManager.InventorySelect] -= 1;

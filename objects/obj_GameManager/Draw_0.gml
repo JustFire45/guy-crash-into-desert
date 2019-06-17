@@ -109,9 +109,12 @@ if (Inventory > 0)
 	for (i = 0; i < P_INVS; i += 1)
 	{
 		var j = 4;
+		var k = 0;
 		if (i == InventorySelect) j = 3;
-		draw_sprite(spr_Inventory, j, camera_get_view_x(view_camera[0]) + 30 + (i * 25), camera_get_view_y(view_camera[0]) + 62);
-		if (P_INV[i] != -1) draw_sprite(spr_InventoryIcons, P_INV[i], camera_get_view_x(view_camera[0]) + 32 + (i * 25), camera_get_view_y(view_camera[0]) + 64);
+		if (i > 7) k = 25;
+		show_debug_message(i);
+		draw_sprite(spr_Inventory, j, camera_get_view_x(view_camera[0]) + 30 + (i * 25) - (k * 8), camera_get_view_y(view_camera[0]) + 62 + k);
+		if (P_INV[i] != -1) draw_sprite(spr_InventoryIcons, P_INV[i], camera_get_view_x(view_camera[0]) + 32 + (i * 25) - (k * 8), camera_get_view_y(view_camera[0]) + 64 + k);
 	}
 	
 	// Item Name
