@@ -40,3 +40,8 @@ DSF_Smoke = 1;
 Inventory = -1;
 InventorySelect = 0;
 InventoryOption = 0;
+
+// Other 2
+Fade = 1;
+FadeInc = -0.05;
+FadeCause = 0;

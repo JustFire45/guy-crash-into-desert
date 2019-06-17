@@ -4,13 +4,12 @@
 draw_set_font(fnt_PixelFive);
 
 // Day/Night Cycle
-
 var hr = 0;
 if (Hour <= 12) hr = Hour;
 else hr = 24 - Hour;
 draw_set_alpha(hr / 16);
 draw_rectangle_colour(camera_get_view_x(view_camera[0]), camera_get_view_y(view_camera[0]), camera_get_view_x(view_camera[0]) + 256, camera_get_view_y(view_camera[0]) + 144, c_black, c_black, c_black, c_black, 0);
-draw_set_alpha(1)
+draw_set_alpha(1);
 
 // MiniBars + Sun/Moon
 draw_sprite(spr_MiniBars, 0, camera_get_view_x(view_camera[0]) + 1, camera_get_view_y(view_camera[0]) + 1);
@@ -22,6 +21,19 @@ draw_sprite_ext(spr_MiniBars, 3, camera_get_view_x(view_camera[0]) + 2, camera_g
 var spr = 0;
 if (Hour > 6 and Hour < 18) spr = 1;
 draw_sprite(spr_SunMoon, spr, camera_get_view_x(view_camera[0]) + 54, camera_get_view_y(view_camera[0]) + 1);
+
+// Fade
+Fade += FadeInc;
+if (Fade > 1) Fade = 1;
+else if (Fade < 0) Fade = 0;
+draw_set_alpha(Fade);
+draw_rectangle_colour(camera_get_view_x(view_camera[0]), camera_get_view_y(view_camera[0]), camera_get_view_x(view_camera[0]) + 256, camera_get_view_y(view_camera[0]) + 144, c_black, c_black, c_black, c_black, 0);
+draw_set_alpha(1);
+
+if (Text[0] == "" and Fade == 1)
+{
+	if (FadeCause == 1) room_restart();
+}
 
 // Text + Textbox
 if (Options[0] != "")
@@ -40,7 +52,8 @@ if (Text[0] != "")
 {
 	draw_sprite(spr_Textbox, 0, camera_get_view_x(view_camera[0]) + 16, camera_get_view_y(view_camera[0]) + 120);
 	if (string_copy(Text[TextText], 1, 13) == "You picked up") draw_set_colour(c_yellow);
-	if (string_copy(Text[TextText], 1, 18) == "You have been shot") draw_set_colour(c_aqua);
+	else if (string_copy(Text[TextText], 1, 18) == "You have been shot") draw_set_colour(c_aqua);
+	else if (string_copy(Text[TextText], 1, 20) == "You have perished...") draw_set_colour(c_red);
 	draw_text_ext(camera_get_view_x(view_camera[0]) + 23, camera_get_view_y(view_camera[0]) + 122, Text[TextText], 7, 1000);
 	draw_set_colour(c_white);
 }

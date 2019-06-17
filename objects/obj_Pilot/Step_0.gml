@@ -1,6 +1,6 @@
 /// Step
 
-if (obj_GameManager.Text[0] == "" and obj_GameManager.Inventory == -1)
+if (obj_GameManager.Text[0] == "" and obj_GameManager.Inventory == -1 and obj_GameManager.P_HP > 0)
 {
 	// Movement
 	if (Move > 0 && obj_GameManager.DT mod 2 == 0)

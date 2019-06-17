@@ -35,8 +35,11 @@ else if (Steps >= 4) DSF_Smoke = 3;
 else if (Steps >= 2) DSF_Smoke = 2;
 
 // Open / Close Inventory
-if (keyboard_check_pressed(vk_tab) and obj_Pilot.Move == 0 and Text[0] == "" and InventoryOption == 0) Inventory *= -1;
-else if (keyboard_check_pressed(ord("X")) and obj_Pilot.Move == 0 and Text[0] == "" and InventoryOption == 0) Inventory = -1;
+if (P_HP > 0)
+{
+	if (keyboard_check_pressed(vk_tab) and obj_Pilot.Move == 0 and Text[0] == "" and InventoryOption == 0) Inventory *= -1;
+	else if (keyboard_check_pressed(ord("X")) and obj_Pilot.Move == 0 and Text[0] == "" and InventoryOption == 0) Inventory = -1;
+}
 
 // Inventory Update
 if (Inventory > 0)
