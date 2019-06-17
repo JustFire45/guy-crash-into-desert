@@ -33,6 +33,7 @@ draw_set_alpha(1);
 if (Text[0] == "" and Fade == 1)
 {
 	if (FadeCause == 1) room_restart();
+	if (FadeCause == 2) room_goto(rm_Credits);
 }
 
 // Text + Textbox
@@ -54,6 +55,7 @@ if (Text[0] != "")
 	if (string_copy(Text[TextText], 1, 13) == "You picked up") draw_set_colour(c_yellow);
 	else if (string_copy(Text[TextText], 1, 18) == "You have been shot") draw_set_colour(c_aqua);
 	else if (string_copy(Text[TextText], 1, 20) == "You have perished...") draw_set_colour(c_red);
+	else if (string_copy(Text[TextText], 1, 17) == "You quietly snuck") draw_set_colour(c_aqua);
 	draw_text_ext(camera_get_view_x(view_camera[0]) + 23, camera_get_view_y(view_camera[0]) + 122, Text[TextText], 7, 1000);
 	draw_set_colour(c_white);
 }
