@@ -14,7 +14,7 @@ if (TrackT <= 0)
 }
 
 // Debug
-var test = 1;
+var test = 0;
 if (test == 1)
 {
 	show_debug_message("Seed: " + string(random_get_seed()));

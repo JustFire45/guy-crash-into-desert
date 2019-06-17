@@ -8,9 +8,9 @@
     "option_windows_company_info": "ORIGAMe STUDIOS \/ JustFire45 \/ peanutbuuter \/ TheDude646",
     "option_windows_copy_exe_to_dest": false,
     "option_windows_copyright_info": "(c) 2019 ORIGAMe STUDIOS \/ JustFire45 \/ peanutbuuter \/ TheDude646",
-    "option_windows_description_info": "Some shitty student project about a war plane pilot who's been shot down into the desert.",
+    "option_windows_description_info": "A war plane pilot gets shot down into the desert.",
     "option_windows_display_cursor": true,
-    "option_windows_display_name": "guy crash into desert",
+    "option_windows_display_name": "Quicksand",
     "option_windows_enable_steam": false,
     "option_windows_executable_name": "${project_name}",
     "option_windows_icon": "${options_dir}\\windows\\icons\\icon.ico",
@@ -19,7 +19,7 @@
     "option_windows_interpolate_pixels": false,
     "option_windows_license": "${base_options_dir}\\windows\\installer\\license.txt",
     "option_windows_nsis_file": "${base_options_dir}\\windows\\installer\\nsis_script.nsi",
-    "option_windows_product_info": "guy crash into desert v0.0.1.1",
+    "option_windows_product_info": "Quicksand",
     "option_windows_resize_window": false,
     "option_windows_save_location": 0,
     "option_windows_scale": 0,
@@ -31,7 +31,7 @@
     "option_windows_version": {
         "build": 0,
         "major": 0,
-        "minor": 0,
+        "minor": 1,
         "revision": 0
     },
     "option_windows_vsync": true
