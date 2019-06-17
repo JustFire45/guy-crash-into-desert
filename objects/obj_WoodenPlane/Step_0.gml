@@ -50,4 +50,4 @@ else if (Op2 == 1 and obj_GameManager.Text[0] == "")
 			break;
 		}
 	}
-}d
+}
