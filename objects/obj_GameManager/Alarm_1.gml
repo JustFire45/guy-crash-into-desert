@@ -24,7 +24,7 @@ while (i < 35)
 
 // Add "obj_WoodenPlane" x70
 var i = 0;
-while (i < 7000)
+while (i < 70)
 {
 	var xx = irandom_range(4, 990);
 	var yy = irandom_range(4, 990);

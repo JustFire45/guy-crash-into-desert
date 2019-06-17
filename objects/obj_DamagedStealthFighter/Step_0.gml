@@ -56,12 +56,13 @@ if (Op2_1 == 1 and obj_GameManager.Text[0] == "")
 	var sqrsY = [-16, 16, 0, 0, 16, -16, 16, -16];
 	for (i = 0; i < 8; i += 1)
 	{
-		// Match [x2]
+		// Metal Scraps [x4]
 		if (!position_meeting(obj_Pilot.x + sqrsX[i], obj_Pilot.y + sqrsY[i], obj_Wall) and !position_meeting(obj_Pilot.x + sqrsX[i], obj_Pilot.y + sqrsY[i], obj_GroundItem))
 		{
 			var j = instance_create_depth(obj_Pilot.x + sqrsX[i], obj_Pilot.y + sqrsY[i], 0, obj_GroundItem);
 			j.image_index = 7;
 			j.Count = 4;
+			image_alpha = 0;
 			break;
 		}
 	}

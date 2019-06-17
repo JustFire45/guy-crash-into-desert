@@ -47,6 +47,7 @@ else if (Op2 == 1 and obj_GameManager.Text[0] == "")
 			var j = instance_create_depth(obj_Pilot.x + sqrsX[i], obj_Pilot.y + sqrsY[i], 0, obj_GroundItem);
 			j.image_index = 6;
 			j.Count = choose(3, 4);
+			image_index = 1;
 			break;
 		}
 	}

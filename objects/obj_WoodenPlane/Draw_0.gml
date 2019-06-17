@@ -1,4 +1,4 @@
 /// Draw
 
-draw_sprite(spr_WoodenPlaneShadow, 0, x, y);
+draw_sprite(spr_WoodenPlaneShadow, image_index, x, y);
 draw_self();
