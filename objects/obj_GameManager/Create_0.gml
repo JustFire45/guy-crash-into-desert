@@ -23,7 +23,7 @@ HungerTick = 3;
 ThirstTick = 1;
 
 // Text
-Text[0] = "";
+Text[0] = "You have been shot down into the desert!\nFind the nearby enemy base and take one of their planes.";
 TextText = 0;
 TextWait = 0;
 Options = ["", "", "", ""];

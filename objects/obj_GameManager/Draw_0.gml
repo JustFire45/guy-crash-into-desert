@@ -40,6 +40,7 @@ if (Text[0] != "")
 {
 	draw_sprite(spr_Textbox, 0, camera_get_view_x(view_camera[0]) + 16, camera_get_view_y(view_camera[0]) + 120);
 	if (string_copy(Text[TextText], 1, 13) == "You picked up") draw_set_colour(c_yellow);
+	if (string_copy(Text[TextText], 1, 18) == "You have been shot") draw_set_colour(c_aqua);
 	draw_text_ext(camera_get_view_x(view_camera[0]) + 23, camera_get_view_y(view_camera[0]) + 122, Text[TextText], 7, 1000);
 	draw_set_colour(c_white);
 }
