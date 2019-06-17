@@ -1,3 +1,3 @@
 /// Init
 
-Burn = 10;
+Burn = irandom_range(15, 20);
