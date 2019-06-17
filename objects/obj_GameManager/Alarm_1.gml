@@ -79,17 +79,3 @@ else
 	Map[xx, yy] = 5;
 	instance_create_depth(xx * 16, yy * 16, 0, obj_Base);
 }
-
-// Add "obj_Base" x2000
-var i = 0;
-while (i < 2000)
-{
-	var xx = irandom_range(2, 997);
-	var yy = irandom_range(2, 997);
-	if (!position_meeting(xx * 16, yy * 16, obj_Wall) and !position_meeting(xx * 16, yy * 16, obj_Pilot))
-	{
-		i += 1;
-		Map[xx, yy] = 1;
-		instance_create_depth(xx * 16, yy * 16, 0, obj_Base);
-	}
-}

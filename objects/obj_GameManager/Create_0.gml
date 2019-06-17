@@ -6,7 +6,7 @@ randomize();
 // Other Variables
 DT = 0;
 depth = -14000;
-Hour = 0;
+Hour = 10;
 Track = 0.5;
 TrackT = 30;
 
